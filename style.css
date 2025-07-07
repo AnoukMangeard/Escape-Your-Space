@@ -1,0 +1,498 @@
+/* ========================================
+   CONFIGURATION GÉNÉRALE ET RÉINITIALISATION
+   ======================================== */
+
+/* Configuration du scroll et débordement */
+html {
+  scroll-behavior: smooth; /* Défilement fluide lors des ancres */
+  overflow-x: hidden; /* Cache le débordement horizontal */
+}
+
+/* Configuration générale du body */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #330000;
+  background-color: white;
+  padding-top: 80px; /* Espace pour la navbar fixe */
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Réinitialisation du box-sizing pour tous les éléments */
+* {
+  box-sizing: border-box;
+}
+
+/* ========================================
+   NAVIGATION PRINCIPALE
+   ======================================== */
+
+/* Barre de navigation fixe en haut */
+nav {
+  position: fixed; /* Fixe la navbar en haut */
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgb(226, 15, 15); /* Rouge principal du site */
+  padding: 2vh 2vw;
+  box-shadow: 0 2px 5px rgba(178, 34, 34, 0.7); /* Ombre portée */
+  z-index: 1000; /* Assure que la navbar reste au-dessus */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Titre dans la navbar */
+nav h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Bouton hamburger pour mobile (caché par défaut) */
+.menu-toggle {
+  display: none; /* Caché sur desktop */
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Lignes du bouton hamburger */
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s; /* Animation pour les transitions */
+}
+
+/* Menu de navigation */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* Liens de navigation */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s; /* Animation au survol */
+}
+
+nav a:hover {
+  color: white;
+}
+
+/* Éléments de liste centrés */
+li {
+  justify-content: center;
+  text-align: center;
+}
+
+/* ========================================
+   SECTIONS PRINCIPALES
+   ======================================== */
+
+/* Style de base pour toutes les sections */
+section {
+  background-color: white;
+  padding: 5vh 5vw;
+  margin: 0px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Section de présentation (concept) */
+#presentation {
+  background-color: white;
+  padding: 5vh 5vw;
+  margin: 0px;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Section des tarifs */
+#tarifs {
+  background-color: white;
+  padding: 5vh 5vw;
+  margin: 0px;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Section de contact (fond rouge) */
+#contact {
+  background-color: rgb(226, 15, 15);
+  color: white;
+  padding: 5vh 5vw;
+  margin: 0px;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Section escape game (fond rouge) */
+#escapegame {
+  background-color: rgb(226, 15, 15);
+  color: white;
+  display: inline-block;
+}
+
+/* ========================================
+   TYPOGRAPHIE ET TITRES
+   ======================================== */
+
+/* Titre principal H1 */
+h1 {
+  color: red;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* Titres secondaires H2 */
+h2 {
+  color: brown;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* Titres de navigation H3 */
+h3 {
+  color: white;
+  margin: 0%;
+  display: block;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* Titres H4 */
+h4 {
+  text-align: center;
+}
+
+/* Titres H5 (sections colorées) */
+h5 {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* Paragraphes */
+p {
+  font-size: 18px;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - TABLETTES (max-width: 768px)
+   ======================================== */
+
+@media (max-width: 768px) {
+  /* Ajustement du padding body */
+  body {
+    padding-top: 70px;
+  }
+
+  /* Ajustement de la navbar */
+  nav {
+    padding: 1.5vh 3vw;
+  }
+
+  nav h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  /* Affichage du bouton hamburger */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Menu mobile avec animation */
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgb(226, 15, 15);
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(178, 34, 34, 0.7);
+    transform: translateY(-100%); /* Menu caché par défaut */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease; /* Animation fluide */
+  }
+
+  /* État actif du menu mobile */
+  .nav-menu.active {
+    transform: translateY(0); /* Menu visible */
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Séparateurs entre éléments du menu */
+  .nav-menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-menu li:last-child {
+    border-bottom: none;
+  }
+
+  /* Liens du menu mobile */
+  .nav-menu a {
+    display: block;
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+
+  /* Ajustement des sections */
+  section {
+    padding: 4vh 4vw;
+    text-align: center;
+  }
+
+  /* Ajustement des tailles de police */
+  h1 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+  h5 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  li {
+    text-align: center;
+  }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MOBILES (max-width: 480px)
+   ======================================== */
+
+@media (max-width: 480px) {
+  /* Ajustement du padding body */
+  body {
+    padding-top: 60px;
+  }
+
+  /* Configuration navbar mobile */
+  nav {
+    flex-direction: row;
+    padding: 1vh 2vw;
+    gap: 0;
+    text-align: center;
+  }
+
+  nav h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  /* Affichage du bouton hamburger */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Menu mobile avec animation */
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgb(226, 15, 15);
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(178, 34, 34, 0.7);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  /* État actif du menu mobile */
+  .nav-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Séparateurs entre éléments du menu */
+  .nav-menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-menu li:last-child {
+    border-bottom: none;
+  }
+
+  /* Liens du menu mobile */
+  .nav-menu a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+
+  /* Ajustement des sections */
+  section {
+    padding: 3vh 3vw;
+    text-align: center;
+  }
+
+  /* Ajustement des tailles de police */
+  h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+  h5 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  li {
+    text-align: center;
+  }
+
+  /* Optimisation des images pour mobile */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - TRÈS PETITS ÉCRANS (max-width: 320px)
+   ======================================== */
+
+@media (max-width: 320px) {
+  /* Ajustement du padding body */
+  body {
+    padding-top: 55px;
+  }
+
+  /* Configuration navbar très petit écran */
+  nav {
+    padding: 0.8vh 1.5vw;
+    text-align: center;
+  }
+
+  nav h3 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  /* Liens du menu très petit écran */
+  .nav-menu a {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+
+  /* Ajustement des sections */
+  section {
+    padding: 2vh 2vw;
+    text-align: center;
+  }
+
+  /* Ajustement des tailles de police */
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+  h5 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  li {
+    text-align: center;
+  }
+}

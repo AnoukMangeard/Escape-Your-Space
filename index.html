@@ -1,190 +1,105 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Escape Your Space</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Escape Your Space</title>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
+  <body>
+    <nav>
+      <h3>Escape Your Space</h3>
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#presentation">Concept</a></li>
+        <li><a href="#escapegame">Escape Games</a></li>
+        <li><a href="#tarifs">Tarifs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.5;
-      color: #330000;
-      background-color: white;
-    }
+    <section id="presentation">
+      <h1>Bienvenue sur le site d'Escape Your Space !</h1>
+      <h2>Le concept ?</h2>
+      <p>Un escape game à domicile !</p>
+      <p>
+        Jeu personnalisé : adapté au lieu et aux demandes.
+        <br />
+        Démarche écoresponsable : matériaux de seconde main, économie
+        circulaire, fabrication manuelle.
+        <br />
+        Organisation complète des sessions : création, logistique, animation,
+        relation client et communication.
+      </p>
+      <img
+        src="./img/escape-your-space-9.png"
+        alt="logo"
+        style="width: 300px; display: block; margin: 0 auto"
+      />
+    </section>
 
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: rgb(226, 15, 15);
-      padding: 2vh 2vw;
-      box-shadow: 0 2px 5px rgba(178, 34, 34, 0.7);
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      font-family: Arial, Helvetica, sans-serif
-    }
+    <section id="escapegame">
+      <h5>Escape games</h5>
+      <img
+        src="./img/mission-risquee.png"
+        alt="illustration Mission Risquée"
+        style="display: block; margin: 0 auto; width: 400px"
+      />
+      <br />
+      <p>
+        Voleurs d'exception, vous êtes appelés sur une nouvelle mission... Vous
+        vous introduisez chez un explorateur afin d'y voler des joyaux
+        précieusement dissimulés. Ces joyaux sont d'une grande valeur, c'est un
+        trésor venant de l'autre bout du monde. Vous disposez d'une heure pour
+        vous plonger dans l'univers d'un explorateur et réussir votre mission.
+        Une fois votre butin récupéré, n'oubliez pas de vous échapper.
+      </p>
+      <p>Prêts à voyager au travers des énigmes ?</p>
+    </section>
 
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 25px;
-      justify-content: center;
-    }
+    <section id="tarifs">
+      <h2>Tarifs à domicile :</h2>
+      <img
+        src="./img/grille-tarifaire.png"
+        alt="grille tarifaire"
+        style="display: block; margin: 0 auto; width: 500px"
+      />
+      <br />
+      <h2>Pour les événements :</h2>
+      <p>Sur devis.</p>
+      <p>
+        Sont concernés : les associations, entreprises, établissements scolaires
+        et universitaires, agglomérations...
+      </p>
+      <p>Nécessite un déplacement préalable sur les lieux.</p>
+    </section>
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      transition: color 0.3s;
-    }
+    <section id="contact">
+      <h5>Contact</h5>
+      <h4>instagram : @escape.your.space</h4>
+      <h4>mail : escape.your.space@gmail.com</h4>
+      <br />
+      <p>
+        Contactez-moi pour toute demande, avec le maximum des informations
+        ci-dessous.
+      </p>
 
-    nav a:hover {
-      color: white;
-
-    }
-
-    li {
-      justify-content: center;
-      text-align: center;
-
-    }
-
-    section {
-      background-color: white;
-      padding: 5vh 25vw;
-      margin: 0px
-    }
-
-
-    #escapegame {
-      background-color: rgb(226, 15, 15);
-      color: white;
-      display: inline-block;
-    }
-
-
-    #contact {
-      background-color: rgb(226, 15, 15);
-      color: white;
-    }
-
-    h1 {
-      color: red;
-      margin-bottom: 20px;
-      text-align: center;
-      font-size: 30px;
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-
-    h2 {
-      color: brown;
-      text-align: center;
-      font-weight: bold;
-      font-size: 25px;
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-
-    h3 {
-      color: white;
-      margin: 0%;
-      display: block;
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-
-    h4 {
-      text-align: center;
-    }
-
-    h5 {
-      color: white;
-      font-size: 25px;
-      text-align: center;
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-
-    p {
-      font-size: 18px;
-      text-align: center;
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-    }
-  </style>
-</head>
-
-<body>
-  <nav>
-    <h3>Escape Your Space</h3>
-    <ul>
-      <li><a href="#presentation">Concept</a></li>
-      <li><a href="#escapegame">Escape Games</a></li>
-      <li><a href="#tarifs">Tarifs</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section id="presentation">
-    <h1>Bienvenue sur le site d'Escape Your Space !</h1>
-    <h2>Le concept ?</h2>
-    <p>Un escape game à domicile !</p>
-    <p>
-      Jeu personnalisé : adapté au lieu et aux demandes.
-      <br>
-      Démarche écoresponsable : matériaux de seconde main, économie circulaire, fabrication manuelle.
-      <br>
-      Organisation complète des sessions : création, logistique, animation, relation client et communication.
-    </p>
-    <img src="c:\Users\anouk\OneDrive\Documents\Escape Your Space\Logo\Logo officiel\Escape Your Space 9.png" alt="logo"
-      style="width: 300px; display: block; margin: 0 auto;">
-  </section>
-
-  <section id="escapegame">
-    <h5>Escape games</h5>
-    <img src="c:\Users\anouk\OneDrive\Documents\Escape Your Space\Escape Games\2-Mission risquée\Mission risquée.png"
-      alt="illustration Mission Risquée" style="display: block; margin: 0 auto; width: 400px;">
-    <br>
-    <p>Voleurs d'exception, vous êtes appelés sur une nouvelle mission... Vous vous introduisez chez un explorateur afin
-      d'y voler des joyaux précieusement dissimulés. Ces joyaux sont d'une grande valeur, c'est un trésor venant de
-      l'autre bout du monde. Vous disposez d'une heure pour vous plonger dans l'univers d'un explorateur et réussir
-      votre mission. Une fois votre butin récupéré, n'oubliez pas de vous échapper.</p>
-    <p>Prêts à voyager au travers des énigmes ?</p>
-  </section>
-
-  <section id="tarifs">
-    <h2>Tarifs à domicile :</h2>
-    <img src="c:\Users\anouk\OneDrive\Documents\Escape Your Space\Tarifs\Grille tarifaire.png" alt="grille tarifaire"
-      style="display: block; margin: 0 auto; width: 500px;">
-    <br>
-    <h2>Pour les événements :</h2>
-    <p>Sur devis.</p>
-    <p>Sont concernés : les associations, entreprises, établissements scolaires et
-      universitaires, agglomérations...</p>
-    <p>Nécessite un déplacement préalable sur les lieux.</p>
-  </section>
-
-  <section id="contact">
-    <h5>Contact</h5>
-    <h4>instagram : @escape.your.space</h4>
-    <h4>mail : escape.your.space@gmail.com</h4>
-    <br>
-    <p>Contactez-moi pour toute demande, avec le maximum des informations ci-dessous. </p>
-
-    <p> Pour une prestation à domicile : nombres de participants, nom, prénom et âge des participants, date
-      d'intervention
-      souhaitée, lieu d'intervention, et autres informations complémentaires. </p>
-    <p>Pour un événement : nom de l'organisme client, lieu d'intervention, date et durée
-      d'intervention souhaitée, contexte de la prestation et autres informations complémentaires...</p>
-  </section>
-
-</body>
-
+      <p>
+        Pour une prestation à domicile : nombres de participants, nom, prénom et
+        âge des participants, date d'intervention souhaitée, lieu
+        d'intervention, et autres informations complémentaires.
+      </p>
+      <p>
+        Pour un événement : nom de l'organisme client, lieu d'intervention, date
+        et durée d'intervention souhaitée, contexte de la prestation et autres
+        informations complémentaires...
+      </p>
+    </section>
+  </body>
+  <script src="script.js"></script>
 </html>
